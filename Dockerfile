@@ -4,7 +4,20 @@ MAINTAINER Brian Adams <wreality@gmail.com>
 #update apt-get
 RUN apt-get update
 #install the required components
-RUN apt-get install -y libmcrypt-dev g++ libicu-dev libmcrypt4 libicu52 zlib1g-dev git libxml2-dev openssh-client mysql-client
+RUN apt-get install -y \
+    libmcrypt-dev \
+    g++ \
+    libicu-dev \
+    libmcrypt4 \
+    libicu52 \
+    zlib1g-dev \
+    git \
+    libxml2-dev \
+    openssh-client \
+    mysql-client \
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev
 #install the PHP extensions we need
 RUN docker-php-ext-install pdo_mysql
 RUN docker-php-ext-install mcrypt
