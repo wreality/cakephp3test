@@ -12,6 +12,7 @@ RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install intl
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install soap
+RUN docker-php-ext-install gd
 
 #####ADD ADDITIONAL INSTALLS OR MODULES BELOW#########
 
